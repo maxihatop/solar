@@ -64,6 +64,18 @@ python mass_loss_vs_voltage.py <voltage_in_volts>
 MIT — because the future belongs to everyone.
 
 ---
+## 🌞 About the Name
+
+The idea of converting the Sun into a long-lived red dwarf may sound ambitious — and it is.
+But every ambitious engineering project needs a name. In this spirit, we affectionately refer to the broader
+initiative as **Sun Macrosystems** — a playful nod to the legendary Sun Microsystems, whose motto
+was *"The network is the computer."* In our case, the motto could be:
+
+> *"The star is the system."*
+
+While the original Sun built operating systems for networks, Sun Macrosystems dreams of operating systems for stars.
+
+---
 ### 🌟 Final Note
 
 These simulations mark the beginning of an interstellar-scale engineering path — not its end.
