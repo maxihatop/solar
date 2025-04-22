@@ -7,11 +7,11 @@ from scipy.integrate import quad
 # Command-line argument parsing
 if len(sys.argv) < 2:
     print(f"Usage: python {sys.argv[0]} <Sun_voltage_in_volts>")
-    print(f"Example: python {sys.argv[0]} 630")
+    print(f"Example: python {sys.argv[0]} 622")
     sys.exit(1)
 
 # --- Physical constants and parameters ---
-k_B_eV = 8.617e-5                 # Boltzmann constant in eV/K
+k_B_eV = 8.617333e-5              # Boltzmann constant in eV/K
 T_K = 1_000_000                   # Chromospheric temperature in Kelvin
 T_eV = T_K * k_B_eV               # Temperature in eV
 
@@ -34,7 +34,7 @@ solar_wind_loss = 2.1e6 / 2                      # Approx. average loss
 
 # Maxwell-Boltzmann energy distribution (normalized in energy space)
 def maxwell_energy_dist(E, T_eV):
-    return np.sqrt(E) * np.exp(-E / T_eV)
+    return 2 * np.sqrt(E / np.pi) * (1 / T_eV)**(3/2) * np.exp(-E / T_eV)
 
 # Integrate tail of distribution (particles that escape)
 f0, _ = quad(lambda E: maxwell_energy_dist(E, T_eV), phi_grav, np.inf)
